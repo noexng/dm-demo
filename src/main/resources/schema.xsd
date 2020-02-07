@@ -1,0 +1,2499 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xs1="http://www.data-mobile.ru"
+        xmlns:tns="http://www.data-mobile.ru"
+        targetNamespace="http://www.data-mobile.ru"
+        attributeFormDefault="unqualified"
+        elementFormDefault="qualified">
+    <xs:complexType name="DMArt">
+        <xs:sequence>
+            <xs:element name="DMArtName"
+                    type="xs:string"/>
+            <xs:element name="DMArtID"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr1"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr2"
+                    type="xs:string"/>
+            <xs:element name="DMArtPrice"
+                    type="xs:decimal"/>
+            <xs:element name="DMBarcodeList"
+                    type="tns:DMBarcode"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+            <xs:element name="DMisMark"
+                    type="xs:boolean"/>
+            <xs:element name="DMArtAttr3"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr4"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr5"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr6"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr7"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr8"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr9"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr10"
+                    type="xs:string"/>
+            <xs:element name="DMUseSN"
+                    type="xs:boolean"/>
+            <xs:element name="DMWeightTask"
+                    type="xs:decimal"
+                    nillable="true"
+                    minOccurs="0"/>
+            <xs:element name="DMMarkType"
+                    type="xs:int"
+                    nillable="true"
+                    minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMArtEgais">
+        <xs:sequence>
+            <xs:element name="ArtID"
+                    type="xs:string"/>
+            <xs:element name="ArtName"
+                    type="xs:string"/>
+            <xs:element name="Barcode"
+                    type="xs:string"/>
+            <xs:element name="Manufacturer"
+                    type="xs:string"/>
+            <xs:element name="Importer"
+                    type="xs:string"/>
+            <xs:element name="Capacity"
+                    type="xs:decimal"/>
+            <xs:element name="PercentAlco"
+                    type="xs:decimal"/>
+            <xs:element name="TypeAlco"
+                    type="xs:string"/>
+            <xs:element name="DMIsCompared"
+                    type="xs:boolean"/>
+            <xs:element name="DMBoxKF"
+                    type="xs:decimal"/>
+            <xs:element name="DMIsNeedBlankA"
+                    type="xs:boolean"/>
+            <xs:element name="DMIsNeedBlankB"
+                    type="xs:boolean"/>
+            <xs:element name="DMIsNeedDateBottling"
+                    type="xs:boolean"/>
+            <xs:element name="DMSN"
+                    type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMArtEgaisList">
+        <xs:sequence>
+            <xs:element name="DMArtEgais"
+                    type="tns:DMArtEgais"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMArtList">
+        <xs:sequence>
+            <xs:element name="DMArt"
+                    type="tns:DMArt"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMArtQueryInfo">
+        <xs:sequence>
+            <xs:element name="DMArtQueryItem"
+                    type="tns:DMArtQueryItem"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMArtQueryInfoUPL">
+        <xs:sequence>
+            <xs:element name="DMArtQueryItemUPL"
+                    type="tns:DMArtQueryItemUPL"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMArtQueryItem">
+        <xs:sequence>
+            <xs:element name="DMArtName"
+                    type="xs:string"/>
+            <xs:element name="DMArtID"
+                    type="xs:string"/>
+            <xs:element name="DMArtPrice"
+                    type="xs:decimal"/>
+            <xs:element name="DMArtAttr1"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr2"
+                    type="xs:string"/>
+            <xs:element name="DMMeasureName"
+                    type="xs:string"/>
+            <xs:element name="DMMeasureK"
+                    type="xs:decimal"/>
+            <xs:element name="DMTaskQnt"
+                    type="xs:decimal"/>
+            <xs:element name="DMLimitQnt"
+                    type="xs:decimal"/>
+            <xs:element name="DMArtAttr3"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr4"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr5"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr6"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr7"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr8"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr9"
+                    type="xs:string"/>
+            <xs:element name="DMArtAttr10"
+                    type="xs:string"/>
+            <xs:element name="DMUseSN"
+                    type="xs:boolean"/>
+            <xs:element name="DMBarcodeUseSN"
+                    type="xs:int"/>
+            <xs:element name="DMSN"
+                    type="xs:string"
+                    nillable="true"
+                    minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMArtQueryItemUPL">
+        <xs:sequence>
+            <xs:element name="DMArt"
+                    type="tns:DMArt"/>
+            <xs:element name="DMBarcode"
+                    type="tns:DMBarcode"/>
+            <xs:element name="DMQty"
+                    type="xs:decimal"/>
+            <xs:element name="DMSN"
+                    type="xs:string"/>
+            <xs:element name="DMCell"
+                    type="xs:string"/>
+            <xs:element name="DMPack"
+                    type="xs:string"/>
+            <xs:element name="DMBoxPack"
+                    type="xs:string"/>
+            <xs:element name="DMPDFBarcode"
+                    type="xs:string"/>
+            <xs:element name="DMDecodedPDFBarcode"
+                    type="xs:string"/>
+            <xs:element name="DMDataMatrixBarcode"
+                    type="xs:string"/>
+            <xs:element name="DMDateBottling"
+                    type="xs:string"/>
+            <xs:element name="DMBlankA"
+                    type="xs:string"/>
+            <xs:element name="DMBlankB"
+                    type="xs:string"/>
+            <xs:element name="DMIsCompared"
+                    type="xs:boolean"
+                    nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMAttrs">
+        <xs:sequence>
+            <xs:element name="DMAttr1"
+                    type="xs:string"/>
+            <xs:element name="DMAttr2"
+                    type="xs:string"/>
+            <xs:element name="DMAttr3"
+                    type="xs:string"/>
+            <xs:element name="DMAttr4"
+                    type="xs:string"/>
+            <xs:element name="DMAttr5"
+                    type="xs:string"/>
+            <xs:element name="DMAttr6"
+                    type="xs:string"/>
+            <xs:element name="DMAttr7"
+                    type="xs:string"/>
+            <xs:element name="DMAttr8"
+                    type="xs:string"/>
+            <xs:element name="DMAttr9"
+                    type="xs:string"/>
+            <xs:element name="DMAttr10"
+                    type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMBarcode">
+        <xs:sequence>
+            <xs:element name="DMBarcode"
+                    type="xs:string"/>
+            <xs:element name="DMMeasureName"
+                    type="xs:string"/>
+            <xs:element name="DMMeasureK"
+                    type="xs:decimal"/>
+            <xs:element name="DMisMark"
+                    type="xs:boolean"/>
+            <xs:element name="DMUseSN"
+                    type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMCell">
+        <xs:sequence>
+            <xs:element name="DMCellName"
+                    type="xs:string"/>
+            <xs:element name="DMBarcode"
+                    type="xs:string"/>
+            <xs:element name="DMTaskQnt"
+                    type="xs:decimal"/>
+            <xs:element name="DMLimitQnt"
+                    type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMCellList">
+        <xs:sequence>
+            <xs:element name="DMCell"
+                    type="tns:DMCell"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMClient">
+        <xs:sequence>
+            <xs:element name="DMName"
+                    type="xs:string"/>
+            <xs:element name="DMClientID"
+                    type="xs:string"/>
+            <xs:element name="DMBarcode"
+                    type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMClientList">
+        <xs:sequence>
+            <xs:element name="DMClient"
+                    type="tns:DMClient"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMDateList">
+        <xs:sequence>
+            <xs:element name="DMDate"
+                    type="xs:dateTime"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMDocHead">
+        <xs:sequence>
+            <xs:element name="DMDocOutID"
+                    type="xs:string"/>
+            <xs:element name="DMNumber"
+                    type="xs:string"/>
+            <xs:element name="DMDate"
+                    type="xs:dateTime"/>
+            <xs:element name="DMComment"
+                    type="xs:string"/>
+            <xs:element name="DMBarcode"
+                    type="xs:string"/>
+            <xs:element name="DMTemplate"
+                    type="tns:DMTemplate"
+                    nillable="true"/>
+            <xs:element name="DMisMark"
+                    type="xs:boolean"/>
+            <xs:element name="DMisLoaded"
+                    type="xs:boolean"/>
+            <xs:element name="DMClient"
+                    type="tns:DMClient"/>
+            <xs:element name="DMClientSelectDate"
+                    type="xs:dateTime"
+                    nillable="true"/>
+            <xs:element name="DMWarehouse"
+                    type="tns:DMWarehouse"
+                    nillable="true"
+                    minOccurs="0"/>
+            <xs:element name="DMWarehouse2"
+                    type="xs:string"
+                    nillable="true"
+                    minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMDocHead_EGAIS">
+        <xs:sequence>
+            <xs:element name="DMDocOutID"
+                    type="xs:string"/>
+            <xs:element name="DMNumber"
+                    type="xs:string"/>
+            <xs:element name="DMDate"
+                    type="xs:dateTime"/>
+            <xs:element name="DMComment"
+                    type="xs:string"/>
+            <xs:element name="DMBarcode"
+                    type="xs:string"/>
+            <xs:element name="DMTemplate_EGAIS"
+                    type="tns:DMTemplate_EGAIS"
+                    nillable="true"/>
+            <xs:element name="DMisMark"
+                    type="xs:boolean"/>
+            <xs:element name="DMisLoaded"
+                    type="xs:boolean"/>
+            <xs:element name="DMClient"
+                    type="tns:DMClient"/>
+            <xs:element name="DMClientSelectDate"
+                    type="xs:dateTime"
+                    nillable="true"/>
+            <xs:element name="DMisQuarantine"
+                    type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMDocList">
+        <xs:sequence>
+            <xs:element name="DMDocHead"
+                    type="tns:DMDocHead"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMDocList_EGAIS">
+        <xs:sequence>
+            <xs:element name="DMDocHead_EGAIS"
+                    type="tns:DMDocHead_EGAIS"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMDocRec">
+        <xs:sequence>
+            <xs:element name="DMBarcode"
+                    type="xs:string"/>
+            <xs:element name="DMSN"
+                    type="xs:string"/>
+            <xs:element name="DMCell"
+                    type="xs:string"/>
+            <xs:element name="DMArtID"
+                    type="xs:string"/>
+            <xs:element name="DMPackID"
+                    type="xs:string"/>
+            <xs:element name="DMQuant"
+                    type="xs:decimal"/>
+            <xs:element name="DMArtName"
+                    type="xs:string"/>
+            <xs:element name="DMLimit"
+                    type="xs:decimal"/>
+            <xs:element name="DMPDFBarcode"
+                    type="xs:string"
+                    nillable="true"/>
+            <xs:element name="DMDataMatrixBarcode"
+                    type="xs:string"
+                    nillable="true"/>
+            <xs:element name="DMDateBottling"
+                    type="xs:string"
+                    nillable="true"/>
+            <xs:element name="DMRowID"
+                    type="xs:int"
+                    nillable="true"/>
+            <xs:element name="DMDecodedPDFBarcode"
+                    type="xs:string"/>
+            <xs:element name="DMBlankA"
+                    type="xs:string"/>
+            <xs:element name="DMBlankB"
+                    type="xs:string"/>
+            <xs:element name="DMRFIDTagID"
+                    type="xs:string"/>
+            <xs:element name="DMChangedPrice"
+                    type="xs:decimal"
+                    nillable="true"/>
+            <xs:element name="DMBoxPackID"
+                    type="xs:string"/>
+            <xs:element name="DMTable"
+                    type="xs:string"/>
+            <xs:element name="DMArtEgaisID"
+                    type="xs:string"/>
+            <xs:element name="DMPrice"
+                    type="xs:decimal"
+                    nillable="true"/>
+            <xs:element name="DMDate"
+                    type="xs:dateTime"
+                    nillable="true"/>
+            <xs:element name="DMGroupId"
+                    type="xs:string"
+                    nillable="true"/>
+            <xs:element name="DMWeightTask"
+                    type="xs:decimal"
+                    nillable="true"
+                    minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMDocRows">
+        <xs:sequence>
+            <xs:element name="DMDocRow"
+                    type="tns:DMDocRec"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMDocsIDs">
+        <xs:sequence>
+            <xs:element name="DMDocID"
+                    type="xs:string"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMImage">
+        <xs:sequence>
+            <xs:element name="DMArtID"
+                    type="xs:string"/>
+            <xs:element name="DMImageID"
+                    type="xs:string"/>
+            <xs:element name="DMImageData"
+                    type="xs:base64Binary"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMImageList">
+        <xs:sequence>
+            <xs:element name="DMImage"
+                    type="tns:DMImage"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMLog">
+        <xs:sequence>
+            <xs:element name="DMLogDate"
+                    type="xs:dateTime"/>
+            <xs:element name="DMLogType"
+                    type="xs:int"/>
+            <xs:element name="DMLogData"
+                    type="xs:string"/>
+            <xs:element name="DMLogUserName"
+                    type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMLogList">
+        <xs:sequence>
+            <xs:element name="DMLog"
+                    type="tns:DMLog"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMMarkEgais">
+        <xs:sequence>
+            <xs:element name="ArtID"
+                    type="xs:string"/>
+            <xs:element name="Mark"
+                    type="xs:string"/>
+            <xs:element name="Box"
+                    type="xs:string"
+                    nillable="true"
+                    minOccurs="0"/>
+            <xs:element name="Pallet"
+                    type="xs:string"
+                    nillable="true"
+                    minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMMarkEgaisList">
+        <xs:sequence>
+            <xs:element name="DMMarkEgais"
+                    type="tns:DMMarkEgais"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMNewDataStruct">
+        <xs:all>
+            <xs:element name="DMClearArts"
+                    type="xs:boolean"/>
+            <xs:element name="DMClearCells"
+                    type="xs:boolean"/>
+            <xs:element name="DMClearTemplates"
+                    type="xs:boolean"/>
+            <xs:element name="DMClearUsers"
+                    type="xs:boolean"/>
+            <xs:element name="DMClearDocs"
+                    type="xs:boolean"/>
+            <xs:element name="DMClearClients"
+                    type="xs:boolean"/>
+            <xs:element name="DMClearUnits"
+                    type="xs:boolean"/>
+            <xs:element name="DMClearEgaisArts"
+                    type="xs:boolean"/>
+            <xs:element name="DMClearWarehouses"
+                    type="xs:boolean"/>
+            <xs:element name="DMClearEgaisMarks"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewArts"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewCells"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewTemplates"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewUsers"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewDocs"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewClients"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewUnits"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewEgaisArts"
+                    type="xs:boolean"/>
+            <xs:element name="DMClearTemplates_EGAIS"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewTemplates_EGAIS"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewWarehouses"
+                    type="xs:boolean"/>
+            <xs:element name="DMNewEgaisMarks"
+                    type="xs:boolean"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="DMTemplate">
+        <xs:sequence>
+            <xs:element name="DMTemplateID"
+                    type="xs:int"/>
+            <xs:element name="DMIsMark"
+                    type="xs:boolean"/>
+            <xs:element name="DMTemplateName"
+                    type="xs:string"/>
+            <xs:element name="DMEnableNew"
+                    type="xs:boolean"/>
+            <xs:element name="DMLoadArtsWithRows"
+                    type="xs:boolean"/>
+            <xs:element name="DMLoadRowsOnOpen"
+                    type="xs:boolean"/>
+            <xs:element name="DMDisableManualChangeClient"
+                    type="xs:boolean"/>
+            <xs:element name="DMDisableReaderChangeClient"
+                    type="xs:boolean"/>
+            <xs:element name="DMreaderTrack1Use"
+                    type="xs:boolean"/>
+            <xs:element name="DMreaderTrack2Use"
+                    type="xs:boolean"/>
+            <xs:element name="DMreaderTrack3Use"
+                    type="xs:boolean"/>
+            <xs:element name="DMnewPackOnWS"
+                    type="xs:boolean"/>
+            <xs:element name="DMuseBCTemplates"
+                    type="xs:boolean"/>
+            <xs:element name="DMuseSelectLogAsInsertTask"
+                    type="xs:boolean"/>
+            <xs:element name="DMonUploadIncorrectDoc"
+                    type="xs:int"/>
+            <xs:element name="DMuseArt_Insert"
+                    type="xs:boolean"/>
+            <xs:element name="DMuseAllBarcode"
+                    type="xs:boolean"/>
+            <xs:element name="DMuse_Select"
+                    type="xs:boolean"/>
+            <xs:element name="DMonArtScan_Select"
+                    type="xs:int"/>
+            <xs:element name="DMonTaskQty_Select"
+                    type="xs:int"/>
+            <xs:element name="DMonLimitQty_Select"
+                    type="xs:int"/>
+            <xs:element name="DMuseCell_Select"
+                    type="xs:int"/>
+            <xs:element name="DMuseSN_Select"
+                    type="xs:int"/>
+            <xs:element name="DMusePack_Select"
+                    type="xs:int"/>
+            <xs:element name="DMuseCellOnTask_Select"
+                    type="xs:boolean"/>
+            <xs:element name="DMuseSNOnTask_Select"
+                    type="xs:boolean"/>
+            <xs:element name="DMquantEnable_Select"
+                    type="xs:boolean"/>
+            <xs:element name="DMenterToCommit_Select"
+                    type="xs:boolean"/>
+            <xs:element name="DMwriteRecordToWS_Select"
+                    type="xs:boolean"/>
+            <xs:element name="DMuse_Insert"
+                    type="xs:boolean"/>
+            <xs:element name="DMonArtScan_Insert"
+                    type="xs:int"/>
+            <xs:element name="DMonTaskQty_Insert"
+                    type="xs:int"/>
+            <xs:element name="DMonLimitQty_Insert"
+                    type="xs:int"/>
+            <xs:element name="DMuseCell_Insert"
+                    type="xs:int"/>
+            <xs:element name="DMuseSN_Insert"
+                    type="xs:int"/>
+            <xs:element name="DMusePack_Insert"
+                    type="xs:int"/>
+            <xs:element name="DMuseCellOnTask_Insert"
+                    type="xs:boolean"/>
+            <xs:element name="DMuseSNOnTask_Insert"
+                    type="xs:boolean"/>
+            <xs:element name="DMquantEnable_Insert"
+                    type="xs:boolean"/>
+            <xs:element name="DMenterToCommit_Insert"
+                    type="xs:boolean"/>
+            <xs:element name="DMwriteRecordToWS_Insert"
+                    type="xs:boolean"/>
+            <xs:element name="DMPrintLabel_Insert"
+                    type="xs:int"/>
+            <xs:element name="DMPrintLabel_Select"
+                    type="xs:int"/>
+            <xs:element name="DMonNewArt"
+                    type="xs:int"/>
+            <xs:element name="DMoneArtReplaceMode"
+                    type="xs:boolean"/>
+            <xs:element name="DMuniquebarcodedoc"
+                    type="xs:boolean"/>
+            <xs:element name="DMMultiDoc"
+                    type="xs:boolean"/>
+            <xs:element name="DMMultiDocSound"
+                    type="xs:boolean"/>
+            <xs:element name="DMMultiDocTimeout"
+                    type="xs:int"/>
+            <xs:element name="DMEnterCell_Select"
+                    type="xs:int"/>
+            <xs:element name="DMEnterCell_Insert"
+                    type="xs:int"/>
+            <xs:element name="UsePhotofixationSelect"
+                    type="xs:boolean"/>
+            <xs:element name="UsePhotofixationInsert"
+                    type="xs:boolean"/>
+            <xs:element name="DMUseEgais"
+                    type="xs:boolean"/>
+            <xs:element name="DMUseDataMatrixBarcode"
+                    type="xs:int"/>
+            <xs:element name="DMUseDateBottling"
+                    type="xs:boolean"/>
+            <xs:element name="DMEnterPDF417Barcode"
+                    type="xs:int"/>
+            <xs:element name="DMEgaisCompare"
+                    type="xs:boolean"/>
+            <xs:element name="DMUseBlankA"
+                    type="xs:int"/>
+            <xs:element name="DMUseBlankB"
+                    type="xs:int"/>
+            <xs:element name="DMGetCellsListFromServerSelect"
+                    type="xs:boolean"/>
+            <xs:element name="DMGetCellsListFromServerInsert"
+                    type="xs:boolean"/>
+            <xs:element name="DMUseCheckMark"
+                    type="xs:boolean"/>
+            <xs:element name="DMIsUniqueSNSelect"
+                    type="xs:boolean"/>
+            <xs:element name="DMIsUniqueSNInsert"
+                    type="xs:boolean"/>
+            <xs:element name="DMEgaisVersion"
+                    type="xs:int"/>
+            <xs:element name="DMGetDateBottlingFromServer"
+                    type="xs:boolean"/>
+            <xs:element name="DMUseOnlineArtsCatalog"
+                    type="xs:boolean"/>
+            <xs:element name="DMAlertNewDoc"
+                    type="xs:boolean"
+                    minOccurs="0"/>
+            <xs:element name="DMUseMark"
+                    type="xs:boolean"
+                    minOccurs="0"/>
+            <xs:element name="DMNoScanArts"
+                    type="xs:boolean"
+                    minOccurs="0"/>
+            <xs:element name="DMNoScanCells"
+                    type="xs:boolean"
+                    minOccurs="0"/>
+            <xs:element name="DMSNType_Insert"
+                    type="xs:string"
+                    nillable="true"
+                    minOccurs="0"/>
+            <xs:element name="DMSNRules_Insert"
+                    type="xs:string"
+                    nillable="true"
+                    minOccurs="0"/>
+            <xs:element name="DMSNNotNull_Insert"
+                    type="xs:boolean"
+                    minOccurs="0"/>
+            <xs:element name="DMFullyCell_Insert"
+                    type="xs:boolean"
+                    minOccurs="0"/>
+            <xs:element name="DMSNNotNull_Select"
+                    type="xs:boolean"
+                    minOccurs="0"/>
+            <xs:element name="DMFullyCell_Select"
+                    type="xs:boolean"
+                    minOccurs="0"/>
+            <xs:element name="DMSNType_Select"
+                    type="xs:string"
+                    nillable="true"
+                    minOccurs="0"/>
+            <xs:element name="DMSNRules_Select"
+                    type="xs:string"
+                    nillable="true"
+                    minOccurs="0"/>
+            <xs:element name="DMDeleteLeftTaskQty"
+                    type="xs:boolean"
+                    nillable="true"
+                    minOccurs="0"/>
+            <xs:element name="DMViewSettings"
+                    type="xs:string"
+                    nillable="true"
+                    minOccurs="0"/>
+            <xs:element name="DMLabels"
+                    type="xs:string"
+                    nillable="true"
+                    minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMTemplateList">
+        <xs:sequence>
+            <xs:element name="DMTemplate"
+                    type="tns:DMTemplate"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMTemplateList_EGAIS">
+        <xs:sequence>
+            <xs:element name="DMTemplate_EGAIS"
+                    type="tns:DMTemplate_EGAIS"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMTemplate_EGAIS">
+        <xs:sequence>
+            <xs:element name="DMTemplateID"
+                    type="xs:int"/>
+            <xs:element name="DMIsMark"
+                    type="xs:boolean"/>
+            <xs:element name="DMTemplateName"
+                    type="xs:string"/>
+            <xs:element name="DMEnableNew"
+                    type="xs:boolean"/>
+            <xs:element name="DMLoadArtsWithRows"
+                    type="xs:boolean"/>
+            <xs:element name="DMLoadRowsOnOpen"
+                    type="xs:boolean"/>
+            <xs:element name="DMnewPackOnWS"
+                    type="xs:boolean"/>
+            <xs:element name="DMonUploadIncorrectDoc"
+                    type="xs:int"/>
+            <xs:element name="DMonArtScan_Select"
+                    type="xs:int"/>
+            <xs:element name="DMonTaskQty_Select"
+                    type="xs:int"/>
+            <xs:element name="DMuseSN_Select"
+                    type="xs:int"/>
+            <xs:element name="DMusePack_Select"
+                    type="xs:int"/>
+            <xs:element name="DMwriteRecordToWS_Select"
+                    type="xs:boolean"/>
+            <xs:element name="DMisNeedScanPDF"
+                    type="xs:boolean"/>
+            <xs:element name="DMisNeedScanDataMatrix"
+                    type="xs:boolean"/>
+            <xs:element name="DMisNeedScanEAN"
+                    type="xs:boolean"/>
+            <xs:element name="DMisNeedScanBox"
+                    type="xs:boolean"/>
+            <xs:element name="DMonTaskType"
+                    type="xs:int"/>
+            <xs:element name="DMonNewArt"
+                    type="xs:int"/>
+            <xs:element name="DMMultiDoc"
+                    type="xs:boolean"
+                    nillable="true"/>
+            <xs:element name="DMMultiDocSound"
+                    type="xs:boolean"
+                    nillable="true"/>
+            <xs:element name="DMMultiDocTimeout"
+                    type="xs:int"
+                    nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMUnit">
+        <xs:sequence>
+            <xs:element name="DMUnitID"
+                    type="xs:string"/>
+            <xs:element name="DMUnitName"
+                    type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMUnitList">
+        <xs:sequence>
+            <xs:element name="DMUnit"
+                    type="tns:DMUnit"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMUser">
+        <xs:sequence>
+            <xs:element name="DMLogin"
+                    type="xs:string"/>
+            <xs:element name="DMName"
+                    type="xs:string"/>
+            <xs:element name="DMPass"
+                    type="xs:string"/>
+            <xs:element name="DMIsAdmin"
+                    type="xs:boolean"/>
+            <xs:element name="DMEnableEditArts"
+                    type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMUserList">
+        <xs:sequence>
+            <xs:element name="DMUser"
+                    type="tns:DMUser"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMWarehouse">
+        <xs:sequence>
+            <xs:element name="DMWarehouseName"
+                    type="xs:string"/>
+            <xs:element name="DMWarehouseID"
+                    type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DMWarehouseList">
+        <xs:sequence>
+            <xs:element name="DMWarehouse"
+                    type="tns:DMWarehouse"
+                    minOccurs="0"
+                    maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="DMServerInfo">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DMServerInfoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="IsNewData">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="IsNewDataResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMNewDataStruct"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetNewArts">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetNewArtsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtList"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetUsers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetUsersResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMUserList"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocHeads">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DMDocsIDs"
+                        type="tns:DMDocsIDs"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocHeadsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMDocList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocRowsSelect">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocRowsSelectResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMDocRows"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocRowsInsert">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocRowsInsertResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMDocRows"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnArtScanSelect">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="Cell"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnArtScanSelectResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtQueryInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnArtScanInsert">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="Cell"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnArtScanInsertResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtQueryInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnWriteRecSelect">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="DocRec"
+                        type="tns:DMDocRec"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnWriteRecSelectResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnWriteRecInsert">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="DocRec"
+                        type="tns:DMDocRec"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnWriteRecInsertResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnCellScan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnCellScanResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMCell"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnNewPack">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnNewPackResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DeleteDoc">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DeleteDocResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ClearDoc">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ClearDocResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ReopenDoc">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ReopenDocResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetDocComment">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="Comment"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetDocCommentResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetDocNumber">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="Number"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetDocNumberResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="WriteDoc">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocHead"
+                        type="tns:DMDocHead"/>
+                <xs:element name="DocRowsSelect"
+                        type="tns:DMDocRows"/>
+                <xs:element name="DocRowsInsert"
+                        type="tns:DMDocRows"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="WriteDocResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CreateDoc">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="TemplateID"
+                        type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CreateDocResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMDocHead"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtRest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtRestResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Login">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="LoginResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocArts">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocArtsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtList"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetClients">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetClientsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMClientList"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetDocClient">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="ClientID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetDocClientResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="IsNewDocs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="IsNewDocsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="UpdateArt">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="Art"
+                        type="tns:DMArt"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="UpdateArtResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+                <xs:element name="Art"
+                        type="tns:DMArt"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="UpdateBarcode">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="tns:DMBarcode"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="UpdateBarcodeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtsDrafts">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtsDraftsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtList"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DeleteArt">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="Art"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DeleteArtResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DeleteBarcode">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DeleteBarcodeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnCommitAutoInsertOnSelect">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnCommitAutoInsertOnSelectResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FastAccess">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FastAccessResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CountDiscount">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CountDiscountResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetBalance">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetBalanceResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Logout">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="LogoutResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetPicture">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetPictureResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:base64Binary"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnPalletScan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="Cell"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnPalletScanResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtQueryInfoUPL"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetNewGroupDocRows">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetNewGroupDocRowsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMDocRows"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetRowPhoto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocID"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="Byte"
+                        type="xs:base64Binary"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetRowPhotoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GenerateNewBC">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="UnitID"
+                        type="xs:string"/>
+                <xs:element name="P1"
+                        type="xs:string"/>
+                <xs:element name="P2"
+                        type="xs:string"/>
+                <xs:element name="BarcodeQuant"
+                        type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GenerateNewBCResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMBarcode"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtCellsSelect">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocID"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtCellsSelectResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMCellList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FastAccessDoc">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FastAccessDocResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetUnits">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetUnitsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMUnitList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetDocPhoto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocID"
+                        type="xs:string"/>
+                <xs:element name="Byte"
+                        type="xs:base64Binary"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetDocPhotoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendArtToPrint">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="Count"
+                        type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendArtToPrintResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendDocToPrint">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendDocToPrintResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendPackToPrint">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocID"
+                        type="xs:string"/>
+                <xs:element name="Pack"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendPackToPrintResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocArtsEgais">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocArtsEgaisResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtEgaisList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnArtEgaisScan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="PDFBarcode"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="Cell"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnArtEgaisScanResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtEgais"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnCellScanSelect">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="CellBC"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnCellScanSelectResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMCell"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnCellScanInsert">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="CellBC"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnCellScanInsertResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMCell"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtOnBC">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtOnBCResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ReplaceDocRow">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="DMDocRec"
+                        type="tns:DMDocRec"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ReplaceDocRowResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMDocRec"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendEgaisBlankABToPrint">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocID"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="Alcocode"
+                        type="xs:string"/>
+                <xs:element name="BlankA"
+                        type="xs:string"/>
+                <xs:element name="BlankB"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendEgaisBlankABToPrintResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CreateEgaisArt">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DMArt"
+                        type="tns:DMArt"/>
+                <xs:element name="DMEgaisArt"
+                        type="tns:DMArtEgais"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CreateEgaisArtResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnDocScan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnDocScanResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMDocList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtAttributesName">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtAttributesNameResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMAttrs"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtCellsInsert">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocID"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtCellsInsertResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMCellList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetCells">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetCellsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMCellList"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetTemplates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetTemplatesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMTemplateList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnEgaisPalletScan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="Cell"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OnEgaisPalletScanResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtQueryInfoUPL"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetEgaisArts">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetEgaisArtsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMArtEgaisList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendLogs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="Logs"
+                        type="tns:DMLogList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendLogsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtsPhotos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtsPhotosResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMImageList"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtQtyByScales">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Cell"
+                        type="xs:string"/>
+                <xs:element name="ArtSN"
+                        type="xs:string"/>
+                <xs:element name="ScalesBarcode"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtQtyByScalesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:decimal"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtEgaisDateBottling">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="PDFBarcode"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtEgaisDateBottlingResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMDateList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DeleteArtPhoto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="DMImageID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DeleteArtPhotoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetArtPhoto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="DMImage"
+                        type="tns:DMImage"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SetArtPhotoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtPhotos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetArtPhotosResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMImageList"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ApproveGroupDocRows">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DocOutID"
+                        type="xs:string"
+                        nillable="true"/>
+                <xs:element name="DMDocsIDs"
+                        type="tns:DMDocsIDs"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ApproveGroupDocRowsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetVersion">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetVersionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetWarehouses">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetWarehousesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMWarehouseList"
+                        nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetEgaisMarks">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetEgaisMarksResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="tns:DMMarkEgaisList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendArtToPrint2">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SN"
+                        type="xs:string"/>
+                <xs:element name="UserName"
+                        type="xs:string"/>
+                <xs:element name="ArtID"
+                        type="xs:string"/>
+                <xs:element name="Barcode"
+                        type="xs:string"/>
+                <xs:element name="Count"
+                        type="xs:integer"/>
+                <xs:element name="QtyInt"
+                        type="xs:string"/>
+                <xs:element name="QtyFrac"
+                        type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SendArtToPrint2Response">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="return"
+                        type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
